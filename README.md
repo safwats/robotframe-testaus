@@ -42,6 +42,9 @@ Testi olettaa, että kirjautumisrajapinnan polku on /api/auth/login
 Testi olettaa, että onnistunut kirjautuminen palauttaa JSON-vastauksen, joka sisältää kentät token ja user
 
 
+
+
+
 ![healtydiary merkintä](https://github.com/user-attachments/assets/fc04ed07-c4de-4fba-9cab-a91f3f9697f2)
 
 ![TEHTÄVÄ 5](https://github.com/user-attachments/assets/24d90991-04fd-4c57-a3e6-7d6a9cffafda)
