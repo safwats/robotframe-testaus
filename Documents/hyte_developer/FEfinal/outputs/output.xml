@@ -1,0 +1,2506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-05T00:47:18.415483" rpa="false" schemaversion="5">
+<suite id="s1" name="Health Diary Test" source="C:\Users\omistaja\Documents\hyte_developer\FEfinal\health_diary_test.robot">
+<test id="s1-t1" name="Login And View Health Diary Entries" line="6">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-04-05T00:47:18.624697" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\omistaja\\Documents\\hyte_developer\\FEfinal\\outputs\\browser\\traces\\temp\\a3b6a422-7623-4881-928c-6b16d7d8a459"}</msg>
+<msg time="2025-04-05T00:47:18.645620" level="INFO">Starting Browser process C:\Users\omistaja\Documents\hyte_developer\FEfinal\.venv\Lib\site-packages\Browser\wrapper\index.js using port 65513</msg>
+<msg time="2025-04-05T00:47:18.645746" level="INFO">Node startup parameters: ['node', 'C:\\Users\\omistaja\\Documents\\hyte_developer\\FEfinal\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '65513']</msg>
+<msg time="2025-04-05T00:47:19.965113" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\omistaja\\Documents\\hyte_developer\\FEfinal\\outputs\\browser\\traces\\temp\\a3b6a422-7623-4881-928c-6b16d7d8a459"}</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-04-05T00:47:18.623935" elapsed="1.341583"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-04-05T00:47:22.156623" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/src/pages/authtest.html</msg>
+<msg time="2025-04-05T00:47:22.156789" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://localhost:5173/src/pages/authtest.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-04-05T00:47:19.966232" elapsed="2.190789"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-05T00:47:22.197505" level="INFO">Waited for Element with selector .loginForm at state visible</msg>
+<arg>.loginForm</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-05T00:47:22.157760" elapsed="0.039904"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-05T00:47:22.198660" level="INFO">Types the text 'user1' in the given field.</msg>
+<arg>.loginForm input[name="username"]</arg>
+<arg>${Username}</arg>
+<arg>delay=0.1s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-05T00:47:22.197998" elapsed="0.584294"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-05T00:47:22.785618" level="INFO">Types the text 'Poliisiauto123' in the given field.</msg>
+<arg>.loginForm input[name="password"]</arg>
+<arg>${Password}</arg>
+<arg>delay=0.1s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-05T00:47:22.783431" elapsed="1.567727"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-05T00:47:24.352027" level="INFO">Clicks the element '.loginForm input[type="submit"]'.</msg>
+<arg>.loginForm input[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-05T00:47:24.351527" elapsed="0.031626"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-04-05T00:47:24.593876" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/name%3Dafter_login.png" target="_blank"&gt;&lt;img src="browser/screenshot/name%3Dafter_login.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>name=after_login</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-04-05T00:47:24.383909" elapsed="0.210170"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-05T00:47:24.686801" level="INFO">Waited for Element with selector body at state visible</msg>
+<arg>body</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-05T00:47:24.594494" elapsed="0.092589"/>
+</kw>
+<kw name="Get Page Source" owner="Browser">
+<msg time="2025-04-05T00:47:24.699299" level="INFO">${html} = &lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;
+    &lt;script type="module" src="/@vite/client"&gt;&lt;/script&gt;
+
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="icon" type="image/svg+xml" href="/vite.svg"&gt;
+    &lt;link rel="sty...</msg>
+<var>${html}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Gets pages HTML source as a string.</doc>
+<status status="PASS" start="2025-04-05T00:47:24.687592" elapsed="0.011762"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-05T00:47:24.700456" level="INFO">&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;
+    &lt;script type="module" src="/@vite/client"&gt;&lt;/script&gt;
+
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="icon" type="image/svg+xml" href="/vite.svg"&gt;
+    &lt;link rel="stylesheet" href="../css/style.css"&gt;
+    &lt;script type="module" src="/src/js/main.js"&gt;&lt;/script&gt;
+    &lt;script src="/src/js/bmidemo.js" defer=""&gt;&lt;/script&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Vite App&lt;/title&gt;
+  &lt;style type="text/css" data-vite-dev-id="C:/Users/omistaja/Documents/hyte_developer/FEfinal/vite-project/src/css/style.css"&gt;:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --pink: rgb(216, 133, 147);
+  --p-10: 10px;
+}
+
+body * {
+  box-sizing: border-box;
+  
+}
+
+body {
+  block-size: fit-content;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/hytekuva.png"); 
+  background-size: cover;  /* Skaalaa kuva täyttämään koko näkymän */
+  background-position: center;  
+  background-attachment: fixed;  /* Pitää kuvan paikallaan skrollatessa */
+  background-repeat: no-repeat; /* Estää kuvan toistumisen */
+}
+
+.about-body {
+  background-image: url('../img/hytekuva.png');
+  overflow: scroll;
+}
+.apitest {
+  background: url("/img/hytekuva.png?v=1") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h3 {
+  border-bottom: 1px solid rgb(28, 28, 31);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #444;
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  /* background-color: #1a1a1a; */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+button.del, button.check, button.update {
+  padding: 0.3rem 0.6rem;
+  margin: 0;
+}
+
+button.update {
+  background-color: #f2e49448;
+}
+
+button.del {
+  background-color: #f2a29448;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: var(--pink);
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #68535358;
+  cursor: pointer;
+}
+
+.forms {
+  display: flex;
+  gap: 30px;
+}
+
+form {
+  color: #0b0101;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  width: 300px;
+  font-size: 0.9em;
+  font-family: sans-serif;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+pre {
+  background-color: aliceblue;
+}
+
+dialog {
+  top: 50%;
+  transform: translateY(-50%);
+}
+::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+
+.card-area {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  min-height: 300px;
+  width: 400px;
+  background-color: #a1aa21b4;
+  display: flex;
+  padding: 1em;
+  box-shadow: 11px 8px 19px 0px rgb(2, 2, 2);
+  border-radius: 30px;
+  gap: 20px;
+}
+
+/* vasen */
+.card-img {
+  flex: 1;
+  object-fit: cover;
+}
+
+.card-img img {
+  width: 100px;
+}
+
+.card-diary {
+  flex: 4;
+}
+
+#bgimage {
+  background-image: url('../img/notebook.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+  
+}
+
+@media screen and (max-width: 800px) {
+  .forms {
+    flex-direction: column;
+  }
+}
+/* sininen outline pois */
+*:focus {
+  outline: none;
+}
+
+/* Nyt värjää myös submit buttonin, ehkä fiksua käyttää id/luokka */
+.registerForm input {
+  border: 1px solid white;
+  border-left: 5px solid;
+  transition: border-color .5s ease-out;
+}
+::placeholder {
+  color: rgb(136, 74, 74);
+  padding-left: 10px;
+  font-weight: 100;
+  -moz-padding-start: 30px;
+}
+input:focus, textarea:focus {
+  background-color: rgb(255, 244, 209);
+}
+.registerForm input:optional {
+  border-left-color: rgb(140, 140, 140);
+}
+.registerForm input:required {
+  border-left-color: yellow;
+}
+.registerForm input:invalid {
+  border-left-color: red;
+}
+.registerForm input:valid {
+  border-left-color: lightgreen
+}
+/* Bannerin tyylit */
+.banner {
+  width: 100%;
+  height: 20%; 
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(109, 81, 81, 0.932)), url('6482662.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center; /* Keskittää sisällön pystysuunnassa */
+}
+
+/* Navigaatiopalkki */
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 10px 0; /* Pienempi padding navigaatiossa */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  color: rgba(21, 70, 130, 0.971);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Hover-efekti alaviivalla */
+.navbar ul li::after {
+  content: "";
+  height: 4px;
+  width: 0%;
+  background: #0d0010;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: width 0.25s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+/*********************/
+/* BMI osion tyylittely */
+
+.card-bmi {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.995);
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgb(213, 197, 197);
+  border-radius: 15px;
+}
+
+
+.card-bm2  h2 {
+  margin-top: 15px;
+}
+
+.card-bmi3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.description {
+  color: grey;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: rgb(30, 39, 46);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.btn:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+tbody {
+  background-color: #fff;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.lowBmi {
+  background-color: rgb(71, 178, 210);
+}
+.normalBmi {
+  background-color: rgb(112, 223, 112);
+}
+.highBmi {
+  background-color: rgb(244, 148, 30);
+}
+
+
+
+/*  Mobiiliresponsiivisuus (max-width: 768px) */
+@media (max-width: 768px) {
+  .card {
+      width: 95%; /*  mobiilinäkymään */
+      padding: 15px; /* Vähennetään sisämarginaalia */
+      background-size: contain; /* Varmistaa, että kuva ei peitä tekstiä */
+  }
+
+  .card h1, .card h2, .card p {
+      font-size: 16px; /* Pienennetään fonttia mobiilissa */
+      line-height: 1.4; /* Lisää väliä riveille */
+  }
+}
+
+/* Pienet mobiilinäytöt (max-width: 480px) */
+@media (max-width: 480px) {
+  .card {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .card h1, .card h2, .card p {
+      font-size: 14px; 
+  }
+}
+
+/* Yhteystiedot kortin tyylit */
+.card-yhteystiedot {
+  color: rgb(11, 11, 11);
+  background-color: rgba(239, 6, 6, 0.9);
+  width: 768px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 80px auto 40px;
+  text-align: center;
+  background-image: url("../img/lineheart.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.card-yhteystiedot h1 {
+  color: #64b1f4;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.heart {
+  width: 150px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.heart-right {
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+footer {
+  height: 50px;
+  background-color: rgb(39, 13, 64);
+  color: aliceblue;
+  text-align: center;
+  padding-top: 10px;
+}
+/* oman teksti varteen */
+.slogan {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  color: #060606;
+}
+
+/* Vain authtest.html taustakuvaa */
+body:has(.loginForm) {
+  background-image: url('../../img/hytekuva.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Yhteinen laatikko register- ja login-formille */
+.auth-container {
+  background: rgba(158, 145, 157, 0.584);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 350px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 50px auto;
+}
+
+.auth-container h3 {
+  margin-bottom: 15px;
+}
+
+.auth-container form {
+  margin-bottom: 20px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: rgba(89, 11, 214, 0.785);
+  color: rgb(168, 57, 57);
+}
+
+.auth-container input::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.auth-container input[type="submit"] {
+  background: rgb(89, 11, 214, 0.785);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.auth-container input[type="submit"]:hover {
+  background: #ddd;
+}
+
+/* Asetetaan kaksi laatikkoa vierekkäin */
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 50px auto;
+}
+
+/* Yleinen laatikkotyyli */
+.box {
+  width: 45%;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(229, 161, 161);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Määritetään erikseen vasen ja oikea laatikko */
+.left-box {
+  float: left;
+}
+
+.right-box {
+  float: right;
+}
+
+/* Responsiivinen muotoilu mobiililaitteille */
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+.map-content {
+  display: flex; /* Asettaa .map ja .content-us vierekkäin */
+  justify-content: space-around; /* Tasainen väli elementtien välillä */
+  align-items: center; /* Kohdistaa ne pystysuunnassa */
+  gap: 20px; /* Väli kahden elementin välillä */
+  flex-wrap: wrap; /* Varmistaa, että pienillä näytöillä ne menevät allekkain */
+  margin-top: 20px;
+}
+
+.map {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Tumma läpinäkyvä tausta */
+  color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  width: 45%; /* Säädetty leveys, jotta se pysyy rivillä */
+  max-width: 600px; /* Maksimikoko */
+  min-width: 300px; /* Ei liian pieni */
+}
+
+.content-us {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.729);
+  color: rgb(250, 250, 250);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgb(245, 242, 242);
+  width: 45%; 
+  max-width: 600px;
+  min-width: 300px;
+}
+.card .get_entries {
+  width: 163px; 
+  height: 50px; 
+  padding: 0; 
+  font-size: 1em; 
+  background-color: #e3f20dd8;; 
+  color: rgb(0, 0, 0); 
+  border: 1px solid transparent; 
+  border-radius: 8px; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Päiväkirjanäkymän tyylit */
+.diary-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(132, 119, 214, 0.749);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.diary-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Flex container päiväkirjaosiolle */
+.diary-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Vasen puoli - merkintöjen näyttäminen */
+.diary-entries-container {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(240, 241, 242, 0.367);
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+.diary-entries-container h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #1a1a13;
+  padding-bottom: 10px;
+}
+
+.get_entries {
+  margin-bottom: 15px;
+  background-color: #5360cd;
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.get_entries:hover {
+  background-color: #8a9119;
+}
+
+/* Oikea puoli - lomake */
+.diary-form-container {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(240, 241, 242, 0.367);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.diary-form-container h3 {
+  margin-top: 0;
+  color: #201e1e;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 10px;
+}
+
+/* Lomakkeen tyylit */
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  color: #866e6e;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.submit-entry {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #5360cd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-entry:hover {
+  background-color: #8a9119;
+}
+
+/* Merkintäkorttien tyylit */
+.entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.entries-list .card {
+  background-color: rgba(167, 84, 219, 0.432);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  min-height: auto;
+  width: 100%;
+}
+
+.entries-list .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.entries-list .card-img {
+  max-width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entries-list .card-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.entries-list .card-diary {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 4;
+}
+
+.entries-list .card-diary p {
+  margin: 3px 0;
+}
+
+/* Tilanneviestit */
+.loading, .error, .no-entries {
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.loading {
+  background-color: rgba(173, 216, 230, 0.5);
+  color: #0066cc;
+}
+
+.error {
+  background-color: rgba(255, 200, 200, 0.5);
+  color: #cc0000;
+}
+
+.no-entries {
+  background-color: rgba(240, 240, 240, 0.7);
+  color: #666;
+}
+
+/* Poistopainike */
+.delete-entry {
+  align-self: flex-end;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-entry:hover {
+  background-color: #c0392b;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+  .diary-flex-container {
+    flex-direction: column;
+  }
+  
+  .diary-entries-container, .diary-form-container {
+    width: 100%;
+  }
+}
+
+/* Lisätään tuki input[type="date"], input[type="number"] elementeille */
+input[type="date"], 
+input[type="number"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}&lt;/style&gt;&lt;style type="text/css" data-vite-dev-id="C:/Users/omistaja/Documents/hyte_developer/FEfinal/vite-project/src/css/snackbar.css"&gt;/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px; /* Set a default minimum width */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  transform: translate(-50%, 0);
+  bottom: 30px; /* 30px from the bottom */
+}
+
+#snackbar.error {
+  background-color: rgb(9, 214, 152);
+}
+
+#snackbar.success {
+  background-color: rgb(94, 240, 72);
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+&lt;/style&gt;&lt;/head&gt;
+  &lt;body class="apitest"&gt;
+    &lt;!-- Banneri --&gt;
+    &lt;div class="banner"&gt;
+      &lt;div class="navbar"&gt;
+        &lt;div class="logo"&gt;👼🏻HyTe hyvinvointialue&lt;/div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="./index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="./about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="./src/pages/apitest.html" target="_blank"&gt;Oma sivusto&lt;/a&gt;&lt;/li&gt;
+          &lt;li id="kirjaudu-ulos" style="display: block;"&gt;&lt;a href="#" onclick="logout()"&gt;Kirjaudu ulos&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="app"&gt;Tervetuloa omalle sivulle! user1&lt;/div&gt;
+
+    &lt;main&gt;
+      &lt;ul class="testlist"&gt;&lt;/ul&gt;
+
+      &lt;table class="styled-table"&gt;
+        &lt;thead&gt;&lt;/thead&gt;
+      &lt;/table&gt;
+
+      &lt;div class="forms"&gt;
+        &lt;div style="flex: 1"&gt;
+          &lt;table class="styled-table"&gt;
+            &lt;thead&gt;&lt;/thead&gt;
+            &lt;tbody id="taulukko" class="tbody"&gt;
+              &lt;!-- tänne haetaan kaikki käyttäjät --&gt;
+              &lt;!-- # Get all users --&gt;
+              &lt;!-- GET http://127.0.0.1:3000/api/users --&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Päiväkirja-osio --&gt;
+      &lt;div class="diary-container"&gt;
+        &lt;h2&gt;Hyvinvointipäiväkirja&lt;/h2&gt;
+        
+        &lt;!-- Päiväkirja-alue (kaksiosainen flex-container) --&gt;
+        &lt;div class="diary-flex-container"&gt;
+          
+          &lt;!-- Vasen puoli: Merkintöjen näyttäminen --&gt;
+          &lt;div class="diary-entries-container"&gt;
+            &lt;h3&gt;Omat merkinnät&lt;/h3&gt;
+            &lt;button class="get_entries"&gt;Näytä merkinnät&lt;/button&gt;
+            &lt;div id="diary-entries" class="entries-list"&gt;&lt;p class="loading"&gt;Ladataan merkintöjä...&lt;/p&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          
+          &lt;!-- Oikea puoli: Uuden merkinnän luominen --&gt;
+          &lt;div class="diary-form-container"&gt;
+            &lt;h3&gt;Lisää uusi merkintä&lt;/h3&gt;
+            &lt;form id="entry-form" class="entry-form"&gt;
+              &lt;div class="form-group"&gt;
+                &lt;label for="entry_date"&gt;Päivämäärä:&lt;/label&gt;
+                &lt;input type="date" id="entry_date" name="entry_date" required=""&gt;
+              &lt;/div&gt;
+              
+              &lt;div class="form-group"&gt;
+                &lt;label for="feeling"&gt;Fiilis:&lt;/label&gt;
+                &lt;input type="text" id="feeling" name="feeling" minlength="3" maxlength="25" required="" placeholder="Esim. Hyvä, Väsynyt, Energinen..."&gt;
+              &lt;/div&gt;
+              
+              &lt;div class="form-group"&gt;
+                &lt;label for="weight"&gt;Paino (kg):&lt;/label&gt;
+                &lt;input type="number" id="weight" name="weight" step="0.1" min="2" max="200" placeholder="Paino kilogrammoina"&gt;
+              &lt;/div&gt;
+              
+              &lt;div class="form-group"&gt;
+                &lt;label for="sleep"&gt;Uni (tuntia):&lt;/label&gt;
+                &lt;input type="number" id="sleep" name="sleep" step="1" min="0" max="24" placeholder="Unen määrä tunteina"&gt;
+              &lt;/div&gt;
+              
+              &lt;div class="form-group"&gt;
+                &lt;label for="note"&gt;Huomio:&lt;/label&gt;
+                &lt;input type="text" id="note" name="note" placeholder="Kirjoita tähän huomiosi päivästä"&gt;
+              &lt;/div&gt;
+              
+              &lt;!-- Debug-tietoja varten --&gt;
+              &lt;div id="form-debug" style="display: none; margin-top: 15px; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 4px;"&gt;
+                &lt;h4 style="margin-top: 0;"&gt;Debug-tiedot&lt;/h4&gt;
+                &lt;pre id="debug-info"&gt;&lt;/pre&gt;
+              &lt;/div&gt;
+              
+              &lt;button type="submit" class="submit-entry"&gt;Tallenna merkintä&lt;/button&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- BMI-laskuri --&gt;
+      &lt;div class="card-bmi"&gt;
+        &lt;img src="/public/img/bmi.jpg" alt="BMI Index chart" style="width: 100%"&gt;
+        &lt;h2&gt;Painoindeksilaskuri / BMI-laskuri&lt;/h2&gt;
+        &lt;p class="description"&gt;
+          Painoindeksilaskurilla voit laskea pituuden ja painon perustella
+          painoindeksin (BMI, Body Mass Index).
+        &lt;/p&gt;
+
+        &lt;!-- Korjattu tyhjä action-attribuutti --&gt;
+        &lt;form action="#" method="post"&gt;
+          &lt;label for="weight"&gt;Anna painosi:&lt;/label&gt;
+          &lt;input type="text" id="weight" name="weight" placeholder="kg"&gt;
+          &lt;label for="height"&gt;Anna pituutesi:&lt;/label&gt;
+          &lt;input type="text" id="height" name="height" placeholder="cm"&gt;
+          &lt;button type="submit" class="btn calculate"&gt;Laske indeksi&lt;/button&gt;
+        &lt;/form&gt;
+
+        &lt;section class="bmi-table"&gt;
+          &lt;h2&gt;BMI-tulokset&lt;/h2&gt;
+          &lt;p&gt;Mittaustuloksesi: &lt;span class="bmi-score"&gt;0&lt;/span&gt;&lt;/p&gt;
+
+          &lt;table id="bmiTbl" class="table table-bordered"&gt;
+            &lt;tbody&gt;
+              &lt;tr class="bmi0-19"&gt;
+                &lt;td&gt;Alipaino&lt;/td&gt;
+                &lt;td&gt;0 - 18.9&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr class="bmi19-25"&gt;
+                &lt;td&gt;Normaali paino&lt;/td&gt;
+                &lt;td&gt;19 - 24.9&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr class="bmi25-30"&gt;
+                &lt;td&gt;Ylipaino&lt;/td&gt;
+                &lt;td&gt;25.0 - 40.0 tai enemmän&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+
+          &lt;p&gt;
+            〽️ Analyysi:
+            &lt;span class="analysis"&gt;Tähän saat analyysin BMI tuloksestasi&lt;/span&gt;
+          &lt;/p&gt;
+        &lt;/section&gt;
+      &lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;!-- The actual snackbar --&gt;
+    &lt;div id="snackbar"&gt;Some text some message..&lt;/div&gt;
+
+    &lt;dialog class="info_dialog"&gt;
+      &lt;p&gt;
+        &lt;!-- tähän täytetään käyttäjän tiedot --&gt;
+        &lt;!-- # Get user by id --&gt;
+        &lt;!-- GET http://127.0.0.1:3000/api/users/1 --&gt;
+      &lt;/p&gt;
+      &lt;button autofocus=""&gt;Close&lt;/button&gt;
+    &lt;/dialog&gt;
+  
+  &lt;footer&gt;Safwatin hyvinvointi sovellus&lt;/footer&gt;
+&lt;/body&gt;&lt;/html&gt;</msg>
+<arg>${html}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-05T00:47:24.700042" elapsed="0.001063"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-04-05T00:47:25.112369" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/name%3Dpaivakirja_merkintojennakyminen.png" target="_blank"&gt;&lt;img src="browser/screenshot/name%3Dpaivakirja_merkintojennakyminen.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>name=paivakirja_merkintojennakyminen</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-04-05T00:47:24.701500" elapsed="0.411075"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-04-05T00:47:25.380689" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-05T00:47:25.113218" elapsed="0.267614"/>
+</kw>
+<doc>Kirjaudu sisään ja tarkastele hyvinvointipäiväkirjamerkintöjä</doc>
+<status status="PASS" start="2025-04-05T00:47:18.622788" elapsed="6.758367"/>
+</test>
+<test id="s1-t2" name="Add New Health Diary Entry" line="35">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-04-05T00:47:25.409074" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\omistaja\\Documents\\hyte_developer\\FEfinal\\outputs\\browser\\traces\\temp\\243aec79-40e2-4b6e-9660-d4d677eccd04"}</msg>
+<msg time="2025-04-05T00:47:25.630625" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\omistaja\\Documents\\hyte_developer\\FEfinal\\outputs\\browser\\traces\\temp\\243aec79-40e2-4b6e-9660-d4d677eccd04"}</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-04-05T00:47:25.408184" elapsed="0.222801"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-04-05T00:47:27.817202" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/src/pages/authtest.html</msg>
+<msg time="2025-04-05T00:47:27.817320" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://localhost:5173/src/pages/authtest.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-04-05T00:47:25.631871" elapsed="2.185710"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-05T00:47:27.851291" level="INFO">Waited for Element with selector .loginForm at state visible</msg>
+<arg>.loginForm</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-05T00:47:27.818104" elapsed="0.033340"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-05T00:47:27.852462" level="INFO">Types the text 'user1' in the given field.</msg>
+<arg>.loginForm input[name="username"]</arg>
+<arg>${Username}</arg>
+<arg>delay=0.1s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-05T00:47:27.851823" elapsed="0.575116"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-05T00:47:28.428873" level="INFO">Types the text 'Poliisiauto123' in the given field.</msg>
+<arg>.loginForm input[name="password"]</arg>
+<arg>${Password}</arg>
+<arg>delay=0.1s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-05T00:47:28.428032" elapsed="1.561746"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-05T00:47:29.992913" level="INFO">Clicks the element '.loginForm input[type="submit"]'.</msg>
+<arg>.loginForm input[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-05T00:47:29.990940" elapsed="0.039896"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-04-05T00:47:30.260180" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/name%3Dafter_login_entry.png" target="_blank"&gt;&lt;img src="browser/screenshot/name%3Dafter_login_entry.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>name=after_login_entry</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.031466" elapsed="0.229107"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-05T00:47:30.362383" level="INFO">Waited for Element with selector body at state visible</msg>
+<arg>body</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.261393" elapsed="0.101472"/>
+</kw>
+<kw name="Get Page Source" owner="Browser">
+<msg time="2025-04-05T00:47:30.411634" level="INFO">${html} = &lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;
+    &lt;script type="module" src="/@vite/client"&gt;&lt;/script&gt;
+
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="icon" type="image/svg+xml" href="/vite.svg"&gt;
+    &lt;link rel="sty...</msg>
+<var>${html}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Gets pages HTML source as a string.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.363514" elapsed="0.048174"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-05T00:47:30.413041" level="INFO">&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;
+    &lt;script type="module" src="/@vite/client"&gt;&lt;/script&gt;
+
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="icon" type="image/svg+xml" href="/vite.svg"&gt;
+    &lt;link rel="stylesheet" href="../css/style.css"&gt;
+    &lt;script type="module" src="/src/js/main.js"&gt;&lt;/script&gt;
+    &lt;script src="/src/js/bmidemo.js" defer=""&gt;&lt;/script&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Vite App&lt;/title&gt;
+  &lt;style type="text/css" data-vite-dev-id="C:/Users/omistaja/Documents/hyte_developer/FEfinal/vite-project/src/css/style.css"&gt;:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --pink: rgb(216, 133, 147);
+  --p-10: 10px;
+}
+
+body * {
+  box-sizing: border-box;
+  
+}
+
+body {
+  block-size: fit-content;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/hytekuva.png"); 
+  background-size: cover;  /* Skaalaa kuva täyttämään koko näkymän */
+  background-position: center;  
+  background-attachment: fixed;  /* Pitää kuvan paikallaan skrollatessa */
+  background-repeat: no-repeat; /* Estää kuvan toistumisen */
+}
+
+.about-body {
+  background-image: url('../img/hytekuva.png');
+  overflow: scroll;
+}
+.apitest {
+  background: url("/img/hytekuva.png?v=1") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h3 {
+  border-bottom: 1px solid rgb(28, 28, 31);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #444;
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  /* background-color: #1a1a1a; */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+button.del, button.check, button.update {
+  padding: 0.3rem 0.6rem;
+  margin: 0;
+}
+
+button.update {
+  background-color: #f2e49448;
+}
+
+button.del {
+  background-color: #f2a29448;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: var(--pink);
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #68535358;
+  cursor: pointer;
+}
+
+.forms {
+  display: flex;
+  gap: 30px;
+}
+
+form {
+  color: #0b0101;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  width: 300px;
+  font-size: 0.9em;
+  font-family: sans-serif;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+pre {
+  background-color: aliceblue;
+}
+
+dialog {
+  top: 50%;
+  transform: translateY(-50%);
+}
+::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+
+.card-area {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  min-height: 300px;
+  width: 400px;
+  background-color: #a1aa21b4;
+  display: flex;
+  padding: 1em;
+  box-shadow: 11px 8px 19px 0px rgb(2, 2, 2);
+  border-radius: 30px;
+  gap: 20px;
+}
+
+/* vasen */
+.card-img {
+  flex: 1;
+  object-fit: cover;
+}
+
+.card-img img {
+  width: 100px;
+}
+
+.card-diary {
+  flex: 4;
+}
+
+#bgimage {
+  background-image: url('../img/notebook.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+  
+}
+
+@media screen and (max-width: 800px) {
+  .forms {
+    flex-direction: column;
+  }
+}
+/* sininen outline pois */
+*:focus {
+  outline: none;
+}
+
+/* Nyt värjää myös submit buttonin, ehkä fiksua käyttää id/luokka */
+.registerForm input {
+  border: 1px solid white;
+  border-left: 5px solid;
+  transition: border-color .5s ease-out;
+}
+::placeholder {
+  color: rgb(136, 74, 74);
+  padding-left: 10px;
+  font-weight: 100;
+  -moz-padding-start: 30px;
+}
+input:focus, textarea:focus {
+  background-color: rgb(255, 244, 209);
+}
+.registerForm input:optional {
+  border-left-color: rgb(140, 140, 140);
+}
+.registerForm input:required {
+  border-left-color: yellow;
+}
+.registerForm input:invalid {
+  border-left-color: red;
+}
+.registerForm input:valid {
+  border-left-color: lightgreen
+}
+/* Bannerin tyylit */
+.banner {
+  width: 100%;
+  height: 20%; 
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(109, 81, 81, 0.932)), url('6482662.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center; /* Keskittää sisällön pystysuunnassa */
+}
+
+/* Navigaatiopalkki */
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 10px 0; /* Pienempi padding navigaatiossa */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  color: rgba(21, 70, 130, 0.971);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Hover-efekti alaviivalla */
+.navbar ul li::after {
+  content: "";
+  height: 4px;
+  width: 0%;
+  background: #0d0010;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: width 0.25s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+/*********************/
+/* BMI osion tyylittely */
+
+.card-bmi {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.995);
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgb(213, 197, 197);
+  border-radius: 15px;
+}
+
+
+.card-bm2  h2 {
+  margin-top: 15px;
+}
+
+.card-bmi3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.description {
+  color: grey;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: rgb(30, 39, 46);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.btn:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+tbody {
+  background-color: #fff;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.lowBmi {
+  background-color: rgb(71, 178, 210);
+}
+.normalBmi {
+  background-color: rgb(112, 223, 112);
+}
+.highBmi {
+  background-color: rgb(244, 148, 30);
+}
+
+
+
+/*  Mobiiliresponsiivisuus (max-width: 768px) */
+@media (max-width: 768px) {
+  .card {
+      width: 95%; /*  mobiilinäkymään */
+      padding: 15px; /* Vähennetään sisämarginaalia */
+      background-size: contain; /* Varmistaa, että kuva ei peitä tekstiä */
+  }
+
+  .card h1, .card h2, .card p {
+      font-size: 16px; /* Pienennetään fonttia mobiilissa */
+      line-height: 1.4; /* Lisää väliä riveille */
+  }
+}
+
+/* Pienet mobiilinäytöt (max-width: 480px) */
+@media (max-width: 480px) {
+  .card {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .card h1, .card h2, .card p {
+      font-size: 14px; 
+  }
+}
+
+/* Yhteystiedot kortin tyylit */
+.card-yhteystiedot {
+  color: rgb(11, 11, 11);
+  background-color: rgba(239, 6, 6, 0.9);
+  width: 768px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 80px auto 40px;
+  text-align: center;
+  background-image: url("../img/lineheart.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.card-yhteystiedot h1 {
+  color: #64b1f4;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.heart {
+  width: 150px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.heart-right {
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+footer {
+  height: 50px;
+  background-color: rgb(39, 13, 64);
+  color: aliceblue;
+  text-align: center;
+  padding-top: 10px;
+}
+/* oman teksti varteen */
+.slogan {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  color: #060606;
+}
+
+/* Vain authtest.html taustakuvaa */
+body:has(.loginForm) {
+  background-image: url('../../img/hytekuva.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Yhteinen laatikko register- ja login-formille */
+.auth-container {
+  background: rgba(158, 145, 157, 0.584);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 350px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 50px auto;
+}
+
+.auth-container h3 {
+  margin-bottom: 15px;
+}
+
+.auth-container form {
+  margin-bottom: 20px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: rgba(89, 11, 214, 0.785);
+  color: rgb(168, 57, 57);
+}
+
+.auth-container input::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.auth-container input[type="submit"] {
+  background: rgb(89, 11, 214, 0.785);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.auth-container input[type="submit"]:hover {
+  background: #ddd;
+}
+
+/* Asetetaan kaksi laatikkoa vierekkäin */
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 50px auto;
+}
+
+/* Yleinen laatikkotyyli */
+.box {
+  width: 45%;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(229, 161, 161);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Määritetään erikseen vasen ja oikea laatikko */
+.left-box {
+  float: left;
+}
+
+.right-box {
+  float: right;
+}
+
+/* Responsiivinen muotoilu mobiililaitteille */
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+.map-content {
+  display: flex; /* Asettaa .map ja .content-us vierekkäin */
+  justify-content: space-around; /* Tasainen väli elementtien välillä */
+  align-items: center; /* Kohdistaa ne pystysuunnassa */
+  gap: 20px; /* Väli kahden elementin välillä */
+  flex-wrap: wrap; /* Varmistaa, että pienillä näytöillä ne menevät allekkain */
+  margin-top: 20px;
+}
+
+.map {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Tumma läpinäkyvä tausta */
+  color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  width: 45%; /* Säädetty leveys, jotta se pysyy rivillä */
+  max-width: 600px; /* Maksimikoko */
+  min-width: 300px; /* Ei liian pieni */
+}
+
+.content-us {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.729);
+  color: rgb(250, 250, 250);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgb(245, 242, 242);
+  width: 45%; 
+  max-width: 600px;
+  min-width: 300px;
+}
+.card .get_entries {
+  width: 163px; 
+  height: 50px; 
+  padding: 0; 
+  font-size: 1em; 
+  background-color: #e3f20dd8;; 
+  color: rgb(0, 0, 0); 
+  border: 1px solid transparent; 
+  border-radius: 8px; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Päiväkirjanäkymän tyylit */
+.diary-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(132, 119, 214, 0.749);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.diary-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Flex container päiväkirjaosiolle */
+.diary-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Vasen puoli - merkintöjen näyttäminen */
+.diary-entries-container {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(240, 241, 242, 0.367);
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+.diary-entries-container h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #1a1a13;
+  padding-bottom: 10px;
+}
+
+.get_entries {
+  margin-bottom: 15px;
+  background-color: #5360cd;
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.get_entries:hover {
+  background-color: #8a9119;
+}
+
+/* Oikea puoli - lomake */
+.diary-form-container {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(240, 241, 242, 0.367);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.diary-form-container h3 {
+  margin-top: 0;
+  color: #201e1e;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 10px;
+}
+
+/* Lomakkeen tyylit */
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  color: #866e6e;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.submit-entry {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #5360cd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-entry:hover {
+  background-color: #8a9119;
+}
+
+/* Merkintäkorttien tyylit */
+.entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.entries-list .card {
+  background-color: rgba(167, 84, 219, 0.432);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  min-height: auto;
+  width: 100%;
+}
+
+.entries-list .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.entries-list .card-img {
+  max-width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entries-list .card-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.entries-list .card-diary {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 4;
+}
+
+.entries-list .card-diary p {
+  margin: 3px 0;
+}
+
+/* Tilanneviestit */
+.loading, .error, .no-entries {
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.loading {
+  background-color: rgba(173, 216, 230, 0.5);
+  color: #0066cc;
+}
+
+.error {
+  background-color: rgba(255, 200, 200, 0.5);
+  color: #cc0000;
+}
+
+.no-entries {
+  background-color: rgba(240, 240, 240, 0.7);
+  color: #666;
+}
+
+/* Poistopainike */
+.delete-entry {
+  align-self: flex-end;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-entry:hover {
+  background-color: #c0392b;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+  .diary-flex-container {
+    flex-direction: column;
+  }
+  
+  .diary-entries-container, .diary-form-container {
+    width: 100%;
+  }
+}
+
+/* Lisätään tuki input[type="date"], input[type="number"] elementeille */
+input[type="date"], 
+input[type="number"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}&lt;/style&gt;&lt;style type="text/css" data-vite-dev-id="C:/Users/omistaja/Documents/hyte_developer/FEfinal/vite-project/src/css/snackbar.css"&gt;/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px; /* Set a default minimum width */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  transform: translate(-50%, 0);
+  bottom: 30px; /* 30px from the bottom */
+}
+
+#snackbar.error {
+  background-color: rgb(9, 214, 152);
+}
+
+#snackbar.success {
+  background-color: rgb(94, 240, 72);
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+&lt;/style&gt;&lt;/head&gt;
+  &lt;body class="apitest"&gt;
+    &lt;!-- Banneri --&gt;
+    &lt;div class="banner"&gt;
+      &lt;div class="navbar"&gt;
+        &lt;div class="logo"&gt;👼🏻HyTe hyvinvointialue&lt;/div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="./index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="./about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="./src/pages/apitest.html" target="_blank"&gt;Oma sivusto&lt;/a&gt;&lt;/li&gt;
+          &lt;li id="kirjaudu-ulos" style="display: block;"&gt;&lt;a href="#" onclick="logout()"&gt;Kirjaudu ulos&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="app"&gt;Tervetuloa omalle sivulle! user1&lt;/div&gt;
+
+    &lt;main&gt;
+      &lt;ul class="testlist"&gt;&lt;/ul&gt;
+
+      &lt;table class="styled-table"&gt;
+        &lt;thead&gt;&lt;/thead&gt;
+      &lt;/table&gt;
+
+      &lt;div class="forms"&gt;
+        &lt;div style="flex: 1"&gt;
+          &lt;table class="styled-table"&gt;
+            &lt;thead&gt;&lt;/thead&gt;
+            &lt;tbody id="taulukko" class="tbody"&gt;
+              &lt;!-- tänne haetaan kaikki käyttäjät --&gt;
+              &lt;!-- # Get all users --&gt;
+              &lt;!-- GET http://127.0.0.1:3000/api/users --&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Päiväkirja-osio --&gt;
+      &lt;div class="diary-container"&gt;
+        &lt;h2&gt;Hyvinvointipäiväkirja&lt;/h2&gt;
+        
+        &lt;!-- Päiväkirja-alue (kaksiosainen flex-container) --&gt;
+        &lt;div class="diary-flex-container"&gt;
+          
+          &lt;!-- Vasen puoli: Merkintöjen näyttäminen --&gt;
+          &lt;div class="diary-entries-container"&gt;
+            &lt;h3&gt;Omat merkinnät&lt;/h3&gt;
+            &lt;button class="get_entries"&gt;Näytä merkinnät&lt;/button&gt;
+            &lt;div id="diary-entries" class="entries-list"&gt;&lt;div class="card" data-entry-id="15"&gt;&lt;div class="card-img"&gt;&lt;img src="/img/notebook.jpg" alt="Päiväkirjamerkintä"&gt;&lt;/div&gt;&lt;div class="card-diary"&gt;
+        &lt;p&gt;&lt;strong&gt;Pvm:&lt;/strong&gt; 4.4.2025&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Fiilis:&lt;/strong&gt; Energinen&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Paino:&lt;/strong&gt; 75.50 kg&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Uni:&lt;/strong&gt; 8 tuntia&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Huomio:&lt;/strong&gt; Hieno päivä! Kävin lenkillä ja söin terveellisesti.&lt;/p&gt;
+      &lt;button class="delete-entry"&gt;Poista&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          
+          &lt;!-- Oikea puoli: Uuden merkinnän luominen --&gt;
+          &lt;div class="diary-form-container"&gt;
+            &lt;h3&gt;Lisää uusi merkintä&lt;/h3&gt;
+            &lt;form id="entry-form" class="entry-form"&gt;
+              &lt;div class="form-group"&gt;
+                &lt;label for="entry_date"&gt;Päivämäärä:&lt;/label&gt;
+                &lt;input type="date" id="entry_date" name="entry_date" required=""&gt;
+              &lt;/div&gt;
+              
+              &lt;div class="form-group"&gt;
+                &lt;label for="feeling"&gt;Fiilis:&lt;/label&gt;
+                &lt;input type="text" id="feeling" name="feeling" minlength="3" maxlength="25" required="" placeholder="Esim. Hyvä, Väsynyt, Energinen..."&gt;
+              &lt;/div&gt;
+              
+              &lt;div class="form-group"&gt;
+                &lt;label for="weight"&gt;Paino (kg):&lt;/label&gt;
+                &lt;input type="number" id="weight" name="weight" step="0.1" min="2" max="200" placeholder="Paino kilogrammoina"&gt;
+              &lt;/div&gt;
+              
+              &lt;div class="form-group"&gt;
+                &lt;label for="sleep"&gt;Uni (tuntia):&lt;/label&gt;
+                &lt;input type="number" id="sleep" name="sleep" step="1" min="0" max="24" placeholder="Unen määrä tunteina"&gt;
+              &lt;/div&gt;
+              
+              &lt;div class="form-group"&gt;
+                &lt;label for="note"&gt;Huomio:&lt;/label&gt;
+                &lt;input type="text" id="note" name="note" placeholder="Kirjoita tähän huomiosi päivästä"&gt;
+              &lt;/div&gt;
+              
+              &lt;!-- Debug-tietoja varten --&gt;
+              &lt;div id="form-debug" style="display: none; margin-top: 15px; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 4px;"&gt;
+                &lt;h4 style="margin-top: 0;"&gt;Debug-tiedot&lt;/h4&gt;
+                &lt;pre id="debug-info"&gt;&lt;/pre&gt;
+              &lt;/div&gt;
+              
+              &lt;button type="submit" class="submit-entry"&gt;Tallenna merkintä&lt;/button&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- BMI-laskuri --&gt;
+      &lt;div class="card-bmi"&gt;
+        &lt;img src="/public/img/bmi.jpg" alt="BMI Index chart" style="width: 100%"&gt;
+        &lt;h2&gt;Painoindeksilaskuri / BMI-laskuri&lt;/h2&gt;
+        &lt;p class="description"&gt;
+          Painoindeksilaskurilla voit laskea pituuden ja painon perustella
+          painoindeksin (BMI, Body Mass Index).
+        &lt;/p&gt;
+
+        &lt;!-- Korjattu tyhjä action-attribuutti --&gt;
+        &lt;form action="#" method="post"&gt;
+          &lt;label for="weight"&gt;Anna painosi:&lt;/label&gt;
+          &lt;input type="text" id="weight" name="weight" placeholder="kg"&gt;
+          &lt;label for="height"&gt;Anna pituutesi:&lt;/label&gt;
+          &lt;input type="text" id="height" name="height" placeholder="cm"&gt;
+          &lt;button type="submit" class="btn calculate"&gt;Laske indeksi&lt;/button&gt;
+        &lt;/form&gt;
+
+        &lt;section class="bmi-table"&gt;
+          &lt;h2&gt;BMI-tulokset&lt;/h2&gt;
+          &lt;p&gt;Mittaustuloksesi: &lt;span class="bmi-score"&gt;0&lt;/span&gt;&lt;/p&gt;
+
+          &lt;table id="bmiTbl" class="table table-bordered"&gt;
+            &lt;tbody&gt;
+              &lt;tr class="bmi0-19"&gt;
+                &lt;td&gt;Alipaino&lt;/td&gt;
+                &lt;td&gt;0 - 18.9&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr class="bmi19-25"&gt;
+                &lt;td&gt;Normaali paino&lt;/td&gt;
+                &lt;td&gt;19 - 24.9&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr class="bmi25-30"&gt;
+                &lt;td&gt;Ylipaino&lt;/td&gt;
+                &lt;td&gt;25.0 - 40.0 tai enemmän&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+
+          &lt;p&gt;
+            〽️ Analyysi:
+            &lt;span class="analysis"&gt;Tähän saat analyysin BMI tuloksestasi&lt;/span&gt;
+          &lt;/p&gt;
+        &lt;/section&gt;
+      &lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;!-- The actual snackbar --&gt;
+    &lt;div id="snackbar"&gt;Some text some message..&lt;/div&gt;
+
+    &lt;dialog class="info_dialog"&gt;
+      &lt;p&gt;
+        &lt;!-- tähän täytetään käyttäjän tiedot --&gt;
+        &lt;!-- # Get user by id --&gt;
+        &lt;!-- GET http://127.0.0.1:3000/api/users/1 --&gt;
+      &lt;/p&gt;
+      &lt;button autofocus=""&gt;Close&lt;/button&gt;
+    &lt;/dialog&gt;
+  
+  &lt;footer&gt;Safwatin hyvinvointi sovellus&lt;/footer&gt;
+&lt;/body&gt;&lt;/html&gt;</msg>
+<arg>${html}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.412545" elapsed="0.001272"/>
+</kw>
+<kw name="Get Elements" owner="Browser">
+<msg time="2025-04-05T00:47:30.430534" level="INFO">Found locator('input').first(),locator('input').nth(1),locator('input').nth(2),locator('input').nth(3),locator('input').nth(4),locator('input').nth(5),locator('input').nth(6) Locators successfully.</msg>
+<msg time="2025-04-05T00:47:30.430978" level="INFO">${input_elements} = ['input &gt;&gt; nth=0', 'input &gt;&gt; nth=1', 'input &gt;&gt; nth=2', 'input &gt;&gt; nth=3', 'input &gt;&gt; nth=4', 'input &gt;&gt; nth=5', 'input &gt;&gt; nth=6']</msg>
+<var>${input_elements}</var>
+<arg>input</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.414284" elapsed="0.016807"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-04-05T00:47:30.432144" level="INFO">Length is 7.</msg>
+<msg time="2025-04-05T00:47:30.432281" level="INFO">${num_inputs} = 7</msg>
+<var>${num_inputs}</var>
+<arg>${input_elements}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.431723" elapsed="0.000609"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-05T00:47:30.433265" level="INFO">Löydettiin 7 input-elementtiä</msg>
+<arg>Löydettiin ${num_inputs} input-elementtiä</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.432826" elapsed="0.000525"/>
+</kw>
+<kw name="Get Elements" owner="Browser">
+<msg time="2025-04-05T00:47:30.445576" level="INFO">Found locator('button').first(),locator('button').nth(1),locator('button').nth(2),locator('button').nth(3),locator('button').nth(4) Locators successfully.</msg>
+<msg time="2025-04-05T00:47:30.445841" level="INFO">${button_elements} = ['button &gt;&gt; nth=0', 'button &gt;&gt; nth=1', 'button &gt;&gt; nth=2', 'button &gt;&gt; nth=3', 'button &gt;&gt; nth=4']</msg>
+<var>${button_elements}</var>
+<arg>button</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.434411" elapsed="0.011523"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-04-05T00:47:30.446773" level="INFO">Length is 5.</msg>
+<msg time="2025-04-05T00:47:30.446866" level="INFO">${num_buttons} = 5</msg>
+<var>${num_buttons}</var>
+<arg>${button_elements}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.446381" elapsed="0.000514"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-05T00:47:30.447605" level="INFO">Löydettiin 5 button-elementtiä</msg>
+<arg>Löydettiin ${num_buttons} button-elementtiä</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.447218" elapsed="0.000441"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-04-05T00:47:30.758271" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/name%3Dpaivakirja_lomake.png" target="_blank"&gt;&lt;img src="browser/screenshot/name%3Dpaivakirja_lomake.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>name=paivakirja_lomake</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.447890" elapsed="0.310560"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-04-05T00:47:31.046870" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-05T00:47:30.759497" elapsed="0.287581"/>
+</kw>
+<doc>Lisää uusi hyvinvointipäiväkirjamerkintä</doc>
+<status status="PASS" start="2025-04-05T00:47:25.406965" elapsed="5.640407"/>
+</test>
+<status status="PASS" start="2025-04-05T00:47:18.416813" elapsed="12.657845"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Health Diary Test" id="s1" pass="2" fail="0" skip="0">Health Diary Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

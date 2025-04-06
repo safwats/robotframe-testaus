@@ -1,0 +1,61 @@
+{"level":30,"time":"2025-04-04T14:19:19.354Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Listening on 51017"}
+(node:40452) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-04-04T14:19:19.761Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-04-04T14:19:19.968Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-04-04T14:19:19.969Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-04-04T14:19:19.968Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-04-04T14:19:19.978Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-04-04T14:19:19.979Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-04-04T14:19:20.009Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Changed active context"}
+{"level":30,"time":"2025-04-04T14:19:20.198Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Video path: undefined"}
+{"level":30,"time":"2025-04-04T14:19:20.198Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Changed active page"}
+{"level":30,"time":"2025-04-04T14:19:20.382Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method newPage"}
+{"level":30,"time":"2025-04-04T14:19:20.390Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-04-04T14:19:20.390Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Strict mode is enabled, find Locator with .loginForm in page."}
+{"level":30,"time":"2025-04-04T14:19:20.433Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-04-04T14:19:20.442Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-04-04T14:19:20.442Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Strict mode is enabled, find Locator with .loginForm input[name=\"username\"] in page."}
+{"level":30,"time":"2025-04-04T14:19:21.063Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method typeText"}
+{"level":30,"time":"2025-04-04T14:19:21.068Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-04-04T14:19:21.068Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Strict mode is enabled, find Locator with .loginForm input[name=\"password\"] in page."}
+{"level":30,"time":"2025-04-04T14:19:22.614Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method typeText"}
+{"level":30,"time":"2025-04-04T14:19:22.617Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method click"}
+{"level":30,"time":"2025-04-04T14:19:22.617Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Strict mode is enabled, find Locator with .loginForm input[type=\"submit\"] in page."}
+{"level":30,"time":"2025-04-04T14:19:22.642Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method click"}
+{"level":30,"time":"2025-04-04T14:19:22.659Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-04-04T14:19:22.660Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-04-04T14:19:22.664Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-04-04T14:19:22.664Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-04-04T14:19:22.728Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Video path: undefined"}
+{"level":30,"time":"2025-04-04T14:19:22.729Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Changed active page"}
+{"level":30,"time":"2025-04-04T14:19:22.885Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method newPage"}
+{"level":30,"time":"2025-04-04T14:19:22.900Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-04-04T14:19:22.901Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Strict mode is enabled, find Locator with .loginForm in page."}
+{"level":30,"time":"2025-04-04T14:19:22.971Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-04-04T14:19:22.979Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-04-04T14:19:22.979Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Strict mode is enabled, find Locator with .loginForm input[name=\"username\"] in page."}
+{"level":30,"time":"2025-04-04T14:19:23.580Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method typeText"}
+{"level":30,"time":"2025-04-04T14:19:23.584Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-04-04T14:19:23.584Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Strict mode is enabled, find Locator with .loginForm input[name=\"password\"] in page."}
+{"level":30,"time":"2025-04-04T14:19:25.139Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method typeText"}
+{"level":30,"time":"2025-04-04T14:19:25.141Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method click"}
+{"level":30,"time":"2025-04-04T14:19:25.142Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Strict mode is enabled, find Locator with .loginForm input[type=\"submit\"] in page."}
+{"level":30,"time":"2025-04-04T14:19:25.159Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method click"}
+{"level":30,"time":"2025-04-04T14:19:25.181Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-04T14:19:25.186Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-04T14:19:25.188Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-04T14:19:25.190Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-04T14:19:25.192Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-04T14:19:25.195Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-04T14:19:25.197Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-04T14:19:25.202Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-04T14:19:25.204Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Changed active context"}
+{"level":30,"time":"2025-04-04T14:19:25.205Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Changing current active page: page=0d2e2fe1-fe7d-4ef7-b4fc-645a5c5441a4"}
+{"level":30,"time":"2025-04-04T14:19:25.205Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Changed active page"}
+{"level":30,"time":"2025-04-04T14:19:25.210Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-04-04T14:19:25.224Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Removed page=66072ad1-bd4f-4cb3-88cf-d5a161e26ceb from context=fb7dd495-c98f-4f37-a89e-8bd86ec42fad page stack"}
+{"level":30,"time":"2025-04-04T14:19:25.227Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Removed page=b2c49859-aecf-49d1-b1e6-f8bfaaa3a1ae from context=fb7dd495-c98f-4f37-a89e-8bd86ec42fad page stack"}
+{"level":30,"time":"2025-04-04T14:19:25.277Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-04-04T14:19:25.377Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-04-04T14:19:25.636Z","pid":40452,"hostname":"DESKTOP-VDV08LR","msg":"End of node method closeAllBrowsers"}

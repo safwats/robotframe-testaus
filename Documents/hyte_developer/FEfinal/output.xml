@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-05T20:51:32.836222" rpa="false" schemaversion="5">
+<suite id="s1" name="Crypto Login Test" source="C:\Users\omistaja\Documents\hyte_developer\FEfinal\crypto_login_test.robot">
+<test id="s1-t1" name="Kirjautuminen Onnistuu Kryptatuilla Tunnuksilla" line="12">
+<kw name="Generate Key" owner="crypto_utils">
+<msg time="2025-04-05T20:51:33.679221" level="INFO">${key} = W082smspuOptEYnRtiw69eT88qf0tU3D-isR3akrOsE=</msg>
+<var>${key}</var>
+<doc>Generate a key for encryption and decryption.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.678927" elapsed="0.000364"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-05T20:51:33.680103" level="INFO">${key} = W082smspuOptEYnRtiw69eT88qf0tU3D-isR3akrOsE=</msg>
+<arg>${key}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.679834" elapsed="0.000336"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-05T20:51:33.680713" level="INFO">Generoitu salausavain: W082smspuOptEYnRtiw69eT88qf0tU3D-isR3akrOsE=</msg>
+<arg>Generoitu salausavain: ${key}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.680511" elapsed="0.000265"/>
+</kw>
+<kw name="Encrypt Text" owner="crypto_utils">
+<msg time="2025-04-05T20:51:33.687711" level="INFO">${encrypted_username} = Z0FBQUFBQm44VzJsMnIxbWZ6Zk1IZDY4MnhiZzlxMm9zeEFZd3ZxRTB4MXdEQjJUSjlxYWIxUUd2QzBJQVVZak1ERzU3YTl6aG5Ca0JZbEpXMmtzYS1KOUF3VzE4YXlMbHc9PQ==</msg>
+<var>${encrypted_username}</var>
+<arg>${Username}</arg>
+<arg>${key}</arg>
+<doc>Encrypt the given text using the key.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.681141" elapsed="0.006633"/>
+</kw>
+<kw name="Encrypt Text" owner="crypto_utils">
+<msg time="2025-04-05T20:51:33.688766" level="INFO">${encrypted_password} = Z0FBQUFBQm44VzJsTl9POHFVX0s3Z3VoTFRQN0ZHdjhfNGVxcEFNUEpNb0NSdVFiaW52SDFIVUdlb1NQX25ZVl9JZEJlME1CVzdnNWg3T2JRQXZfVnRxOGpOUDJNZ0ZhN2c9PQ==</msg>
+<var>${encrypted_password}</var>
+<arg>${Password}</arg>
+<arg>${key}</arg>
+<doc>Encrypt the given text using the key.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.688298" elapsed="0.000518"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-05T20:51:33.689474" level="INFO">Kryptattu käyttäjätunnus: Z0FBQUFBQm44VzJsMnIxbWZ6Zk1IZDY4MnhiZzlxMm9zeEFZd3ZxRTB4MXdEQjJUSjlxYWIxUUd2QzBJQVVZak1ERzU3YTl6aG5Ca0JZbEpXMmtzYS1KOUF3VzE4YXlMbHc9PQ==</msg>
+<arg>Kryptattu käyttäjätunnus: ${encrypted_username}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.689205" elapsed="0.000344"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-05T20:51:33.690157" level="INFO">Kryptattu salasana: Z0FBQUFBQm44VzJsTl9POHFVX0s3Z3VoTFRQN0ZHdjhfNGVxcEFNUEpNb0NSdVFiaW52SDFIVUdlb1NQX25ZVl9JZEJlME1CVzdnNWg3T2JRQXZfVnRxOGpOUDJNZ0ZhN2c9PQ==</msg>
+<arg>Kryptattu salasana: ${encrypted_password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.689948" elapsed="0.000292"/>
+</kw>
+<kw name="Decrypt Text" owner="crypto_utils">
+<msg time="2025-04-05T20:51:33.690992" level="INFO">${decrypted_username} = user1</msg>
+<var>${decrypted_username}</var>
+<arg>${encrypted_username}</arg>
+<arg>${key}</arg>
+<doc>Decrypt the given encrypted text using the key.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.690557" elapsed="0.000480"/>
+</kw>
+<kw name="Decrypt Text" owner="crypto_utils">
+<msg time="2025-04-05T20:51:33.691892" level="INFO">${decrypted_password} = Poliisiauto123</msg>
+<var>${decrypted_password}</var>
+<arg>${encrypted_password}</arg>
+<arg>${key}</arg>
+<doc>Decrypt the given encrypted text using the key.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.691471" elapsed="0.000473"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${decrypted_username}</arg>
+<arg>${Username}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.692792" elapsed="0.000294"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${decrypted_password}</arg>
+<arg>${Password}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.693461" elapsed="0.000299"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-05T20:51:33.694797" level="INFO">${auth_data} = {'username': 'user1', 'password': 'Poliisiauto123'}</msg>
+<var>${auth_data}</var>
+<arg>username=${decrypted_username}</arg>
+<arg>password=${decrypted_password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.694231" elapsed="0.000613"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-04-05T20:51:33.818953" level="INFO">POST Request : url=http://127.0.0.1:3000/api/auth/login 
+ path_url=/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '51', 'Content-Type': 'application/json'} 
+ body=b'{"username": "user1", "password": "Poliisiauto123"}' 
+ </msg>
+<msg time="2025-04-05T20:51:33.819061" level="INFO">POST Response : url=http://127.0.0.1:3000/api/auth/login 
+ status=200, reason=OK 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '618', 'ETag': 'W/"26a-7K+F8G2zG2QPao70IiOTjK9cqkA"', 'Date': 'Sat, 05 Apr 2025 17:51:33 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"message":"login ok","user":{"user_id":1,"username":"user1","password":"$2b$10$Qg2ARpJptO9dadUVERcJgOn72wuUxp4sgd.lmlvenr6UlTCQKFDiO","email":"niko@niko.com","created_at":"2025-03-13T23:50:03.000Z","user_level":"regular"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InVzZXIxIiwicGFzc3dvcmQiOiIkMmIkMTAkUWcyQVJwSnB0TzlkYWRVVkVSY0pnT243Mnd1VXhwNHNnZC5sbWx2ZW5yNlVsVENRS0ZEaU8iLCJlbWFpbCI6Im5pa29Abmlrby5jb20iLCJjcmVhdGVkX2F0IjoiMjAyNS0wMy0xM1QyMzo1MDowMy4wMDBaIiwidXNlcl9sZXZlbCI6InJlZ3VsYXIiLCJpYXQiOjE3NDM4NzU0OTMsImV4cCI6MTc0Mzk2MTg5M30.4U89NYzRh0lauvJvTa_LdJbhOfnG3O9QX3pRtrVVPeI"} 
+ </msg>
+<msg time="2025-04-05T20:51:33.819384" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${API_URL}${LOGIN_ENDPOINT}</arg>
+<arg>json=${auth_data}</arg>
+<arg>expected_status=anything</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.695178" elapsed="0.124342"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Kirjautuminen Onnistui">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-05T20:51:33.822224" level="INFO">Kirjautuminen onnistui!</msg>
+<arg>Kirjautuminen onnistui!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.821904" elapsed="0.000382"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-05T20:51:33.822827" level="INFO">${json} = {'message': 'login ok', 'user': {'user_id': 1, 'username': 'user1', 'password': '$2b$10$Qg2ARpJptO9dadUVERcJgOn72wuUxp4sgd.lmlvenr6UlTCQKFDiO', 'email': 'niko@niko.com', 'created_at': '2025-03-13T23:5...</msg>
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.822418" elapsed="0.000435"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json}</arg>
+<arg>token</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.822939" elapsed="0.000129"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json}</arg>
+<arg>user</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.823197" elapsed="0.000113"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-05T20:51:33.823679" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InVzZXIxIiwicGFzc3dvcmQiOiIkMmIkMTAkUWcyQVJwSnB0TzlkYWRVVkVSY0pnT243Mnd1VXhwNHNnZC5sbWx2ZW5yNlVsVENRS0ZEaU8iLCJlbWFpbCI6Im5pa29Abml...</msg>
+<var>${token}</var>
+<arg>${json}[token]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.823546" elapsed="0.000157"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-05T20:51:33.823938" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InVzZXIxIiwicGFzc3dvcmQiOiIkMmIkMTAkUWcyQVJwSnB0TzlkYWRVVkVSY0pnT243Mnd1VXhwNHNnZC5sbWx2ZW5yNlVsVENRS0ZEaU8iLCJlbWFpbCI6Im5pa29Abml...</msg>
+<arg>${token}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.823804" elapsed="0.000169"/>
+</kw>
+<arg>${response}</arg>
+<status status="PASS" start="2025-04-05T20:51:33.821491" elapsed="0.002537"/>
+</kw>
+<arg>${response.status_code} == 200</arg>
+<arg>Kirjautuminen Onnistui</arg>
+<arg>${response}</arg>
+<arg>ELSE</arg>
+<arg>Kirjautuminen Epäonnistui</arg>
+<arg>${response}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-05T20:51:33.820303" elapsed="0.003764"/>
+</kw>
+<status status="PASS" start="2025-04-05T20:51:33.677453" elapsed="0.146962"/>
+</test>
+<status status="PASS" start="2025-04-05T20:51:32.840883" elapsed="0.984696"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Crypto Login Test" id="s1" pass="1" fail="0" skip="0">Crypto Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
